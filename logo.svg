@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" width="100%" height="100%">
+  <defs>
+    <!-- Metallic Silver Gradient for Text and Left K stroke -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="25%" stop-color="#E1E4E6" />
+      <stop offset="50%" stop-color="#8C9398" />
+      <stop offset="75%" stop-color="#CAD0D4" />
+      <stop offset="100%" stop-color="#565D63" />
+    </linearGradient>
+
+    <!-- Vibrant Orange-Yellow Gradient for Diagonal K stroke -->
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB300" />
+      <stop offset="50%" stop-color="#FF6120" />
+      <stop offset="100%" stop-color="#D02E00" />
+    </linearGradient>
+
+    <!-- 3D Bevel Highlight Gradient -->
+    <linearGradient id="bevelHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Strong 3D Drop Shadow Filter -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="10" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+
+    <!-- Soft Glow Filter for the Star -->
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="translate(40, 20)">
+    <!-- LOGO GRAPHICS GROUP -->
+    <g filter="url(#dropShadow)">
+      <!-- STYLIZED 'K' -->
+      <!-- Left metallic vertical pillar of the K (slanted) -->
+      <path d="M 175 140 L 205 140 L 150 330 L 120 330 Z" fill="url(#metalGradient)" stroke="#111111" stroke-width="1.5" />
+      
+      <!-- Top orange diagonal branch -->
+      <path d="M 183 238 L 290 140 L 330 140 L 210 248 Z" fill="url(#orangeGradient)" stroke="#111111" stroke-width="1.5" />
+      
+      <!-- Bottom orange diagonal branch -->
+      <path d="M 197 236 L 243 330 L 298 330 L 227 215 Z" fill="url(#orangeGradient)" stroke="#111111" stroke-width="1.5" />
+      
+      <!-- 'LEEN' TEXT re-created with custom premium vector paths for flawless cross-device italic rendering -->
+      <!-- 'L' -->
+      <path d="M 330 190 L 360 190 L 333 285 L 395 285 L 390 305 L 303 305 Z" fill="url(#metalGradient)" stroke="#111111" stroke-width="1.5" />
+      
+      <!-- 'E' -->
+      <path d="M 412 190 L 492 190 L 487 210 L 442 210 L 436 233 L 481 233 L 476 253 L 431 253 L 423 285 L 471 285 L 466 305 L 385 305 Z" fill="url(#metalGradient)" stroke="#111111" stroke-width="1.5" />
+      
+      <!-- 'E' -->
+      <path d="M 502 190 L 582 190 L 577 210 L 532 210 L 526 233 L 571 233 L 566 253 L 521 253 L 513 285 L 561 285 L 556 305 L 475 305 Z" fill="url(#metalGradient)" stroke="#111111" stroke-width="1.5" />
+      
+      <!-- 'N' -->
+      <path d="M 592 190 L 625 190 L 664 278 L 688 190 L 717 190 L 685 305 L 657 305 L 614 212 L 592 305 L 563 305 Z" fill="url(#metalGradient)" stroke="#111111" stroke-width="1.5" />
+      
+      <!-- FOUR-POINT STAR / SPARKLE at top right of 'N' -->
+      <!-- Center is approx (725, 150) -->
+      <path d="M 725 105 Q 725 140 760 140 Q 725 140 725 175 Q 725 140 690 140 Q 725 140 725 105 Z" fill="url(#orangeGradient)" filter="url(#starGlow)" />
+    </g>
+
+    <!-- TAGLINE AND SEPARATOR -->
+    <!-- "At Your Doorstep, On your Schedule." -->
+    <!-- Text styling to match exact color scheme and layout -->
+    <text x="420" y="380" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="34" font-style="italic" text-anchor="middle">
+      <tspan fill="#03143D">At Your Doorstep, </tspan>
+      <tspan fill="#FF6120">On your Schedule.</tspan>
+    </text>
+
+    <!-- Decorative orange bottom underline line -->
+    <line x1="280" y1="410" x2="560" y2="410" stroke="#FF6120" stroke-width="4" stroke-linecap="round" />
+  </g>
+</svg>
