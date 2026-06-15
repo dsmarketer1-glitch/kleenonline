@@ -851,6 +851,41 @@
     </div>
   </section>
 
+  <!-- ACCOUNT DELETION SECTION -->
+  <section class="account-deletion-section section-padding" id="delete-account">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-tagline">DATA PRIVACY &amp; CONTROL</span>
+        <h2 class="section-title">Delete Your Account</h2>
+        <p class="section-subtitle">We value your privacy. If you wish to delete your Kleen account and all associated data, submit a request below.</p>
+      </div>
+      <div class="delete-account-form-container reveal-on-scroll" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <form id="delete-account-form" onsubmit="event.preventDefault(); submitDeleteRequest();">
+          <div style="margin-bottom: 20px;">
+            <label for="del-name" style="display: block; font-weight: 600; margin-bottom: 8px;">Full Name</label>
+            <input type="text" id="del-name" placeholder="Enter your registered name" style="width: 100%; padding: 12px 16px; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit;" required>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label for="del-phone" style="display: block; font-weight: 600; margin-bottom: 8px;">Registered Phone Number</label>
+            <input type="tel" id="del-phone" placeholder="Enter your registered phone number" style="width: 100%; padding: 12px 16px; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit;" required>
+          </div>
+          <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Note: By clicking the button below, an email draft will be created with your details. Please send the email to complete your request. Our team will process your deletion request within 7 working days.</p>
+          <button type="submit" class="btn btn-primary btn-lg w-full" style="width: 100%; border: none; cursor: pointer; display: flex; justify-content: center;">Request Account Deletion</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      function submitDeleteRequest() {
+        var name = document.getElementById('del-name').value;
+        var phone = document.getElementById('del-phone').value;
+        if (!name || !phone) return;
+        var subject = encodeURIComponent('Account Deletion Request - Kleen App');
+        var body = encodeURIComponent('Hello Kleen Team,\n\nI would like to request the deletion of my account and all associated data. Here are my details:\n\nName: ' + name + '\nPhone Number: ' + phone + '\n\nPlease confirm once my data has been deleted.\n\nThank you.');
+        window.location.href = 'mailto:kleen.helpdesk@gmail.com?subject=' + subject + '&body=' + body;
+      }
+    </script>
+  </section>
+
   <!-- FINAL CONVERSION SECTION (BOTTOM OF PAGE) -->
   <section class="final-conversion-section section-padding bg-navy text-white" id="download">
     <div class="container text-center reveal-on-scroll">
